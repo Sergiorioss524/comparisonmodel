@@ -64,7 +64,7 @@ async function testXRPLTransaction(): Promise<TransactionResult> {
     const duration = (endTime - startTime) / 1000; // Convert to seconds
 
     // Extract fee from transaction (in drops, convert to XRP then USD)
-    const feeInDrops = parseInt(prepared.Fee || '10');
+    const feeInDrops = parseInt((prepared as any).Fee || '10');
     const feeInXRP = feeInDrops / 1000000;
     const feeInUSD = feeInXRP * 2.5; // Approximate XRP price
 
