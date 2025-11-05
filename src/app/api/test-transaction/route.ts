@@ -121,7 +121,7 @@ async function testEthereumUSDTTransaction(): Promise<TransactionResult> {
     console.log('Ethereum block number:', blockNumber);
 
     // Typical USDT transfer costs ~65,000 gas
-    const gasEstimate = 65000n;
+    const gasEstimate = BigInt(65000);
 
     // Get current gas price
     const feeData = await provider.getFeeData();
