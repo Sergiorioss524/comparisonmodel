@@ -213,7 +213,7 @@ async function testEthereumWithLogs(
 
     // Estimate gas
     sendLog({ type: 'log', message: '⛽ Estimating gas for ERC-20 transfer...', network: 'Ethereum' });
-    const gasEstimate = 65000n;
+    const gasEstimate = BigInt(65000);
     const feeData = await provider.getFeeData();
     const gasPrice = feeData.gasPrice || ethers.parseUnits('25', 'gwei');
 
