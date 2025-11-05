@@ -86,7 +86,7 @@ async function testXRPLWithLogs(
     const endTime = Date.now();
     const duration = (endTime - startTime) / 1000;
 
-    const feeInDrops = parseInt(prepared.Fee || '10');
+    const feeInDrops = parseInt((prepared as any).Fee || '10');
     const feeInXRP = feeInDrops / 1000000;
     const feeInUSD = feeInXRP * 2.5;
 
